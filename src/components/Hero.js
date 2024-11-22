@@ -12,7 +12,8 @@ const Hero = () => {
       <div className="columns">
         <div className="column-1">
           <div className="welcome-message">
-            <h1>Hi, I'm Maria Carrion</h1>
+          <h1>Hi, I&apos;m Maria Carrion</h1>
+
             <hr></hr>
             <p>
               A Marketing and Communications expert passionate about creating
