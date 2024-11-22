@@ -1,0 +1,119 @@
+# Documentación para el Desarrollo del Portafolio de Maria Carrion
+
+## Objetivo del Proyecto:
+Crear un portafolio web profesional que muestre la experiencia de Maria Carrion en Marketing y Comunicaciones. El portafolio destacará sus habilidades en branding, gestión de crisis, comunicación interna, y sostenibilidad, y servirá como herramienta de presentación personal a clientes y empleadores potenciales.
+
+## **Estructura de Navegación (Navigation Tree)**
+
+- **Home**
+  - Welcome Message
+  - Featured Highlights
+  - Call-to-Action (Explore Portfolio, Download CV)
+
+- **About Me**
+  - Introduction
+  - Snapshot (Location, Languages, Skills)
+
+- **Portfolio**
+  - Marketing
+  - Internal Communications
+  - Crisis Management
+  - Brand Identity
+
+- **Skills**
+  - Core Skills
+  - Tools
+  - Industry Expertise
+
+- **Testimonials**
+  - Endorsements from colleagues and clients
+
+- **Blog (Optional)**
+  - Thought leadership articles
+  - Latest industry trends
+
+- **Contact**
+  - Email
+  - LinkedIn
+  - Download CV
+
+# **Descripción de las Secciones Principales**
+
+## **Home**
+Esta es la primera sección visible para los visitantes. Debe capturar la atención de los usuarios de manera inmediata, destacando las competencias clave de **Maria Carrion en marketing y comunicaciones.**
+
+- **Welcome Message**: Introducción breve sobre la experiencia y especialización de Maria, incluyendo su enfoque en campañas sostenibles, crisis management, y branding.
+- **Featured Highlights**: Resumen de logros más importantes, como la rebranding de CDC NSW y la introducción de movilidad eléctrica en Ecuador.
+- **Call-to-Action**: Botones llamativos para explorar el portafolio y descargar el CV. Esto es crucial para incentivar la interacción inmediata de los visitantes.
+
+## **About Me**
+Esta sección debe humanizar y proporcionar contexto sobre la carrera de Maria Carrion, destacando su experiencia y valores.
+
+- **Introduction**: Un párrafo breve que destaque la experiencia en comunicación y sostenibilidad.
+- **Snapshot**: Información clave que incluya ubicación, idiomas hablados, y habilidades principales. Es importante que este contenido esté bien estructurado para que el visitante pueda leerlo rápidamente.
+
+## **Portfolio**
+Aquí se presentarán los proyectos de Maria divididos en varias categorías. Los visitantes podrán ver ejemplos específicos de su trabajo, lo que demostrará su experiencia práctica.
+
+- **Marketing**: Proyectos relacionados con campañas de marketing, como CDC NSW y Condor Energy Ecuador.
+- **Internal Communications**: Ejemplos de comunicación interna, con énfasis en CDC NSW y Holcim Ecuador.
+- **Crisis Management**: Proyectos que muestran cómo Maria ha gestionado situaciones de crisis en empresas como CDC NSW y Holcim Ecuador.
+- **Brand Identity**: Casos donde se destaca la creación y gestión de la identidad de marca, como Condor Energy Ecuador y BYD Ecuador.
+
+## **Skills**
+Presenta las habilidades más relevantes para el perfil de Maria.
+
+- **Core Skills**: Listado de habilidades principales como Marketing Strategy, Crisis Communications, Stakeholder Engagement, y Copywriting.
+- **Tools**: Herramientas que utiliza Maria, como Adobe Creative Suite, Trello, y Monday.com.
+- **Industry Expertise**: Áreas en las que Maria tiene experiencia, como Sostenibilidad y Energía Renovable, y Transporte Público y Movilidad Eléctrica.
+
+## **Testimonials**
+Incluir testimonios de colegas y clientes sobre la habilidad de Maria para liderar proyectos y gestionar relaciones complejas. Los testimonios sirven para construir credibilidad y confianza.
+
+## **Blog (Opcional)**
+Un espacio donde Maria pueda compartir artículos relacionados con tendencias de la industria, liderazgo de pensamiento y otros temas relevantes. Estos artículos pueden ayudar a posicionarla como una experta en su campo y atraer más tráfico hacia su sitio web.
+
+## **Contact**
+Es una sección crucial para facilitar la comunicación directa con Maria.
+
+- **Email**: Un enlace directo para contactar vía correo electrónico.
+- **LinkedIn**: Enlace a su perfil de LinkedIn para una mayor conexión profesional.
+- **Download CV**: Enlace directo para que los visitantes descarguen su CV en formato PDF.
+
+---
+
+# **Características de Usabilidad (User-Friendly Features)**
+
+- **Sticky Header Navigation**: El menú de navegación debe mantenerse fijo en la parte superior de la pantalla a medida que el usuario se desplaza por la página. Esto mejora la accesibilidad y facilita la navegación.
+- **Responsive Design**: El sitio debe ser completamente optimizado para dispositivos móviles y de escritorio. Usar un diseño adaptativo que ajuste el contenido a diferentes tamaños de pantalla es esencial para una buena experiencia de usuario.
+- **Portfolio Filters**: Se deben incluir filtros en la sección del portafolio para que los usuarios puedan ver proyectos específicos según categorías como Marketing, Comunicaciones Internas, Gestión de Crisis, etc. Esto permitirá a los visitantes explorar solo las áreas que más les interesen.
+
+---
+
+# **Tecnologías y Herramientas Propuestas**
+
+- **Frontend**: React.js para la estructura interactiva y dinámica de la página.
+- **Estilos**: Tailwind CSS para un diseño limpio y personalizable, asegurando tiempos de carga rápidos y diseño responsivo.
+- **Portafolio de Proyectos**: Utilizar un sistema de filtrado con React para mostrar los proyectos según categorías.
+- **Blog**: Usar Markdown o un CMS ligero (como Contentful) para gestionar artículos si se decide incluir un blog.
+- **Optimización SEO**: Implementar buenas prácticas SEO en el frontend, incluyendo etiquetas meta, texto alternativo para imágenes, y URLs amigables.
+
+---
+
+# **Flujo de Usuario (User Flow)**
+
+1. **Inicio**: El usuario llega a la página de inicio y lee el mensaje de bienvenida y los logros destacados de Maria. Los botones de acción invitan al usuario a explorar más detalles del portafolio o descargar el CV.
+2. **Sobre mí**: Los usuarios pueden ver la introducción y el "Snapshot", con información clave sobre la carrera y habilidades de Maria.
+3. **Portafolio**: Los usuarios exploran los proyectos en diferentes categorías y pueden usar los filtros para encontrar proyectos relevantes. Cada proyecto incluye una descripción detallada y ejemplos visuales de su trabajo.
+4. **Habilidades**: Los visitantes pueden ver las habilidades principales y las herramientas utilizadas por Maria, además de su experiencia en sectores específicos.
+5. **Testimonios**: Los usuarios leen testimonios que validan la experiencia y habilidades de Maria.
+6. **Blog (si está habilitado)**: Los usuarios leen artículos sobre temas relacionados con marketing, comunicación y sostenibilidad.
+7. **Contacto**: El usuario tiene acceso a los detalles de contacto y puede enviar un mensaje a Maria directamente desde la página.
+
+---
+
+# **Consideraciones de Accesibilidad**
+
+- **Contrastes de color**: Asegurarse de que el contraste de los colores del texto sea adecuado para facilitar la lectura.
+- **Navegación con teclado**: La navegación debe ser accesible mediante el teclado para usuarios con discapacidades.
+- **Etiquetas ARIA**: Usar etiquetas ARIA para mejorar la accesibilidad del sitio.
