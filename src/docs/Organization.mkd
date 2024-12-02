@@ -1,0 +1,98 @@
+# Organización del Proyecto: Portafolio Web
+
+## **1. Documentación**
+### **Especificaciones del Proyecto**
+- **Objetivo General:** Crear un portafolio profesional con las siguientes secciones:
+  - **Home**: Welcome Message, Featured Highlights, Call-to-Action.
+  - **Portfolio**: Proyectos destacados con imágenes y descripciones.
+  - **About**: Descripción profesional y habilidades clave.
+  - **Contact**: Formulario de contacto.
+- **Estilo Visual:** 
+  - Paleta de colores definida.
+  - Tipografía profesional y accesible.
+- **Funcionalidades Esperadas:**
+  - Diseño responsivo.
+  - Optimización para SEO.
+  - Formulario funcional para enviar correos.
+  - 
+### **Arquitectura del Proyecto**
+- **Estructura de Carpetas:**
+  - `/components`
+    - `Navbar.jsx`
+    - `Hero.jsx`
+    - `Footer.jsx`
+  - `/pages`
+    - `index.jsx`
+    - `about.jsx`
+    - `contact.jsx`
+  - `/styles`
+    - `globals.css`
+    - `home.css`
+  - `/public`
+    - `/images`
+      - `project1.png`
+      - `profile.jpg`
+  - `/utils`
+    - `email.js`
+
+
+
+**Herramientas Utilizadas:**
+- Framework: Next.js.
+- Hosting: Vercel.
+- Gestión de Repositorio: GitHub.
+
+
+### **Cronograma de Desarrollo**
+- **Día 1:** Configuración inicial del proyecto (estructura, estilos globales).
+- **Día 2-3:** Implementación de Navbar, Hero y secciones base.
+- **Día 4-5:** Diseño del portfolio y formulario de contacto.
+- **Día 6:** Testing básico y optimización.
+
+
+  ---
+
+  ## **2. Herramientas y Configuraciones**
+### **Gestión del Repositorio**
+- Rama principal: `main` (estable).
+- Rama secundaria: `dev` (en desarrollo).
+
+### **Configuraciones Técnicas**
+- **Prettier** y **ESLint:** Para mantener el código limpio y consistente.
+- **SEO:** Configuración básica con etiquetas `<meta>` y títulos dinámicos.
+
+---
+
+## **3. Diseño y Planificación Visual**
+### **Wireframe Inicial**
+- Esquema de la disposición de las secciones principales.
+- Herramienta: Figma.
+
+### **Estilo Visual**
+- **Paleta de Colores:**
+- Primario: #672416
+- Secundario: #a27852
+- Fondo: #f9f9f9
+- **Tipografías:**
+- Principal: Montserrat.
+- Secundaria: Roboto.
+
+---
+
+
+## **4. Configuración del Proyecto**
+### **Archivos Base**
+- `README.md` con:
+- Propósito del proyecto.
+- Cómo ejecutar y desplegar el proyecto.
+- Enlace al sitio en producción.
+
+### **Base de Estilos**
+- Variables CSS:
+```css
+:root {
+    --primary-color: #672416;
+    --secondary-color: #a27852;
+    --background-color: #f9f9f9;
+    --font-main: "Montserrat", sans-serif;
+}
