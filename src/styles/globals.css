@@ -10,10 +10,27 @@
 
 body {
   background-color: #fff;
+
   color: #333;
   line-height: 1.6;
   font-size: 16px;
   overflow-x: hidden;
+  
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/bg.png");
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.3; /* Ajusta el valor de la opacidad aquí */
+  z-index: -1; /* Asegura que la imagen quede detrás del contenido */
 }
 
 :root {
@@ -52,18 +69,11 @@ hr{
 section{  
   padding: 1.5rem 1rem !important;
   border: none !important;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-1);
+
   
+  max-width: 1200px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
 
 /* Clases para centrar el texto */
 .text-center {
@@ -179,7 +189,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  width: 1200px;
   margin-top: calc(5rem + 1.7rem);
 }
 
@@ -341,11 +351,22 @@ img {
   color: #666;
 }
 
-
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .main-content{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-1);
+  width: 1200px;
 }
 
 .articulo{
@@ -353,4 +374,45 @@ img {
   width: 100%;
   justify-content: center;
   padding: 1rem;
+}
+
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color4);
+  margin-bottom: 20px;
+}
+
+.about-me-content {
+  font-size: 1rem;
+  
+  color: #555;
+  line-height: 1.6;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.snapshot-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.snapshot-list li {
+  margin-bottom: 8px;
 }
