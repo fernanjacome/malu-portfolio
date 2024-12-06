@@ -14,6 +14,11 @@ export default function Home() {
         <AboutMe />
         <Portfolio />
       </div>
+      <div className="main-content-2">
+        <Hero />
+        <AboutMe />
+        <Portfolio />
+      </div>
     </div>
   );
 }

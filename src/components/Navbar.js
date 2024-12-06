@@ -2,14 +2,24 @@ import React, { useState } from 'react';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('home');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSetActive = (section) => {
     setActiveLink(section);
+    setMenuOpen(false); // Cierra el menú tras seleccionar un enlace
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    console.log('Menu toggled:', menuOpen); // Verifica si cambia el estado
   };
 
   return (
     <header className="header-navbar">
-      <ul>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
+      <ul className={`menu ${menuOpen ? 'open' : ''}`}>
         {[
           { id: 'home', label: 'Home' },
           { id: 'about', label: 'About Me' },
