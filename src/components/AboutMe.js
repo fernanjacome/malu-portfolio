@@ -1,6 +1,6 @@
 import React from "react";
-import Map from "./custom/Map";
 
+import Image from "next/image";
 const AboutMe = () => {
   return (
     <section id="about" className="about-me-section">
@@ -40,6 +40,13 @@ const AboutMe = () => {
             <div className="about-me-socialcontent">
               <ul className="social-links">
                 <li>
+                  <Image
+                    src="/icons/linkedin.png"
+                    alt="profile"
+                    className="svg-socials"
+                    width={25}
+                    height={25}
+                  />
                   <a
                     href="https://www.linkedin.com/in/yourprofile"
                     target="_blank"
@@ -49,6 +56,14 @@ const AboutMe = () => {
                   </a>
                 </li>
                 <li>
+                  {" "}
+                  <Image
+                    src="/icons/twitter.png"
+                    alt="profile"
+                    className="svg-socials"
+                    width={25}
+                    height={25}
+                  />
                   <a
                     href="https://twitter.com/yourprofile"
                     target="_blank"
@@ -58,21 +73,27 @@ const AboutMe = () => {
                   </a>
                 </li>
                 <li>
+                  <Image
+                    src="/icons/mail.png"
+                    alt="profile"
+                    className="svg-socials"
+                    width={25}
+                    height={25}
+                  />
                   <a href="mailto:your-email@example.com">Email</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        
       </div>
       {/* Agregar el componente de mapa aquí */}
-      <div className="about-me-map">
+      {/* <div className="about-me-map">
         
       <hr ></hr>
         <h3 className="content-title">Where I Am</h3>
         <Map />
-      </div>
+      </div> */}
     </section>
   );
 };

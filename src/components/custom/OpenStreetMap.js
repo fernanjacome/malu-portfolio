@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const MapClient = () => {
+const OpenStreetMap = () => {
   useEffect(() => {
     // Verifica si el mapa ya está inicializado
     if (!document.getElementById('map')._leaflet_id) {
@@ -15,6 +15,8 @@ const MapClient = () => {
         touchZoom: false,
         doubleClickZoom: false,
       });
+
+      
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -34,13 +36,10 @@ const MapClient = () => {
       style={{
         height: '300px',
         width: '450px',
-        borderRadius: '12px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-        border: '2px solid rgba(255, 255, 255, 0.3)',
         marginTop: '20px',
       }}
     ></div>
   );
 };
 
-export default MapClient;
+export default OpenStreetMap;

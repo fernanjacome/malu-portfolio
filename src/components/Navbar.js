@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSetActive = (section) => {
     setActiveLink(section);
-    setMenuOpen(false); // Cierra el menú tras seleccionar un enlace
+    setMenuOpen(false);
   };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log('Menu toggled:', menuOpen); // Verifica si cambia el estado
+    console.log("Menu toggled:", menuOpen);
   };
 
   return (
@@ -19,20 +19,20 @@ const Navbar = () => {
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>
-      <ul className={`menu ${menuOpen ? 'open' : ''}`}>
+      <ul className={`menu ${menuOpen ? "open" : ""}`}>
         {[
-          { id: 'home', label: 'Home' },
-          { id: 'about', label: 'About Me' },
-          { id: 'portfolio', label: 'Portfolio' },
-          { id: 'skills', label: 'Skills' },
-          { id: 'testimonials', label: 'Testimonials' },
-          { id: 'blog', label: 'Blog' },
-          { id: 'contact', label: 'Contact' },
+          { id: "home", label: "Home" },
+          { id: "about", label: "About Me" },
+          { id: "portfolio", label: "Portfolio" },
+          { id: "skills", label: "Skills" },
+          { id: "testimonials", label: "Testimonials" },
+          { id: "blog", label: "Blog" },
+          { id: "contact", label: "Contact" },
         ].map((item) => (
           <li key={item.id}>
             <a
               href={`#${item.id}`}
-              className={activeLink === item.id ? 'active' : ''}
+              className={activeLink === item.id ? "active" : ""}
               onClick={() => handleSetActive(item.id)}
             >
               {item.label}

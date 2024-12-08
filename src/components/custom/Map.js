@@ -1,9 +1,14 @@
-import dynamic from 'next/dynamic';
-import 'leaflet/dist/leaflet.css';
+import dynamic from "next/dynamic";
 
-const Map = dynamic(
-  () => import('./MapClient'), // Importa el componente con lógica de Leaflet
-  { ssr: false } // Desactiva el renderizado en el servidor
-);
+// Cargar OpenStreetMap de forma dinámica y deshabilitar SSR
+const OpenStreetMap = dynamic(() => import("./OpenStreetMap"), { ssr: false });
+
+const Map = () => {
+  return (
+    <div>
+      <OpenStreetMap />
+    </div>
+  );
+};
 
 export default Map;
