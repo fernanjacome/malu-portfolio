@@ -22,7 +22,7 @@ class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0"
+            content="width=device-width, initial-scale=0.70, maximum-scale=0.70, user-scalable=no"
           />
           <meta
             name="description"
