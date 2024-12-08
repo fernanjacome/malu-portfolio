@@ -494,10 +494,11 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../public/minimal-2.jpg");
+  background-image: url("../../public/minimalgreen.jpg");
   background-size: cover;
+  border-radius: 10px;
   background-position: center;
-  opacity: 1;
+  opacity: 0.7;
   z-index: -1;
   /* Ajusta el color y opacidad (0.4) */
 
@@ -754,6 +755,10 @@ img {
     padding: 2.5rem 0;
   }
 
+  .portfolio-section-mb h3 {
+    margin-bottom: 3rem;
+  }
+
   .portfolio-section-mb {
     display: flex;
     justify-content: center;
@@ -766,15 +771,15 @@ img {
   .portfolio-section-mb::before {
     content: "";
     position: absolute;
-    top: 5%;
+    top: 6%;
     left: 5%;
     width: 90%;
     height: 100%;
     border-radius: 10px;
-    background-image: url("../../public/minimal-2.jpg");
+    background-image: url("../../public/minimal3.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 1;
+    opacity: 0.6;
     z-index: -1;
     /* Ajusta el color y opacidad (0.4) */
 
