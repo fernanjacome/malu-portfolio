@@ -14,7 +14,6 @@ body {
   line-height: 1.6;
   font-size: 16px;
   overflow-x: hidden;
-
 }
 
 body::before {
@@ -24,7 +23,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../public/bg.png");
+  background-image: url("../../public/bg.webp");
   background-size: cover;
   background-position: center;
 
@@ -76,7 +75,6 @@ section {
   /* Centra la sección */
   max-width: 1200px;
 }
-
 
 /* Clases para centrar el texto */
 .text-center {
@@ -175,7 +173,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 5rem;
-
 }
 
 .column-1 {
@@ -188,7 +185,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .call-to-action {
@@ -282,7 +278,6 @@ img {
   color: rgba(255, 255, 255, 0.9);
 }
 
-
 .cards-featured {
   display: flex;
   flex-wrap: wrap;
@@ -304,13 +299,14 @@ img {
   background-color: #a27852;
   color: #fff;
 
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .button-custom:hover {
   background-color: #fff;
   border-color: var(--color4);
-  color: var(--color4)
+  color: var(--color4);
 }
 
 .button-custom.secondary {
@@ -358,9 +354,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 88%;
-
 }
-
 
 .section-title {
   font-size: 2.5rem;
@@ -378,7 +372,6 @@ img {
 }
 
 .about-me-content {
-
   font-size: 1rem;
   display: flex;
   gap: 2rem;
@@ -431,8 +424,6 @@ img {
   color: var(--color4) !important;
 }
 
-
-
 .social-links li:hover {
   background-color: var(--color4);
 }
@@ -442,7 +433,8 @@ img {
 }
 
 .social-links li:hover .svg-socials {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
 .social-links a {
@@ -450,7 +442,6 @@ img {
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
-
 
 .content-title {
   font-size: 1.5rem;
@@ -494,16 +485,14 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../public/minimalgreen.jpg");
+  background-image: url("../../public/minimalgreen.webp");
   background-size: cover;
   border-radius: 10px;
   background-position: center;
   opacity: 0.7;
   z-index: -1;
   /* Ajusta el color y opacidad (0.4) */
-
 }
-
 
 .portfolio-section h3 {
   color: var(--color6);
@@ -537,9 +526,6 @@ img {
 .grid-item:nth-child(3n) {
   grid-column: span 2;
 }
-
-
-
 
 .company-name {
   font-weight: bold;
@@ -581,10 +567,6 @@ img {
   margin-bottom: 0.5rem;
 }
 
-
-
-
-
 .menu-toggle {
   display: none;
   background: none;
@@ -616,12 +598,10 @@ img {
   font-weight: bold;
 }
 
-
 /* PC */
 @media (min-width: 1024px) {
   .main-content-mobile {
     display: none;
-
   }
 }
 
@@ -629,7 +609,6 @@ img {
 @media (max-width: 768px) {
   .main-content-pc {
     display: none;
-
   }
 
   .main {
@@ -637,7 +616,6 @@ img {
   }
 
   .main-content-mobile {
-
     margin-top: 14% !important;
     display: flex;
     flex-direction: column;
@@ -645,8 +623,6 @@ img {
     align-items: center;
     margin: 0 auto;
   }
-
-
 
   .home-section-mb {
     padding: 2rem !important;
@@ -695,7 +671,6 @@ img {
   }
 
   .call-to-action {
-
     margin-top: 0.4rem;
   }
 
@@ -706,7 +681,6 @@ img {
   .about-me-section-mb {
     padding: 1rem 4rem !important;
   }
-
 
   .about-me-section-mb .about-me-content {
     display: flex;
@@ -721,7 +695,6 @@ img {
 
   .snapshot-list {
     font-size: 1.2rem;
-
   }
 
   .about-me-snapshot hr {
@@ -782,10 +755,7 @@ img {
     opacity: 0.6;
     z-index: -1;
     /* Ajusta el color y opacidad (0.4) */
-
   }
-
-
 
   .menu {
     flex-direction: column;
@@ -799,8 +769,6 @@ img {
     transform: translateY(-100%);
     opacity: 0;
     border: 2px solid var(--color4);
-
-
   }
 
   .menu.open {
@@ -814,12 +782,11 @@ img {
     padding: 0.5rem;
   }
 
-
-
   .menu-toggle {
     display: block;
   }
 }
 
 /* Estilos para tablets */
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+}
