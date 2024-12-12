@@ -1,12 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // Estado para determinar si es móvil
+
+  // Verificar el tamaño de la ventana y actualizar el estado de isMobile
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Definir el umbral para "móvil" en 768px
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Verifica el tamaño al cargar
+
+    return () => window.removeEventListener("resize", handleResize); // Limpiar el listener al desmontar
+  }, []);
 
   const handleSetActive = (section) => {
     setActiveLink(section);
     setMenuOpen(false);
+
+    // Modificar el ID de la sección si estamos en modo móvil
+    const sectionId = isMobile ? `${section}-mobile` : section;
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   const toggleMenu = () => {
@@ -31,9 +55,12 @@ const Navbar = () => {
         ].map((item) => (
           <li key={item.id}>
             <a
-              href={`#${item.id}`}
+              href={`#${isMobile ? `${item.id}-mobile` : item.id}`}
               className={activeLink === item.id ? "active" : ""}
-              onClick={() => handleSetActive(item.id)}
+              onClick={(e) => {
+                e.preventDefault(); // Prevenir la navegación predeterminada
+                handleSetActive(item.id);
+              }}
             >
               {item.label}
             </a>

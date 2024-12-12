@@ -1,10 +1,9 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Portfolio = () => {
   const portfolioData = [
     {
-      title: "Portfolio",
+      title: "Marketing",
       items: [
         {
           company: "CDC NSW",
@@ -85,12 +84,16 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="portfolio-section">
-      <div className="container">
-        <h3 className="section-title">My Portfolio</h3>
-        <div className="bento-grid">
-          {portfolioData.map((section, index) =>
-            section.items.map((item, itemIndex) => (
-              <div key={`${index}-${itemIndex}`} className="grid-item">
+      <h3 className="section-title">Portfolio</h3>
+      <div className="grid-container">
+        {portfolioData.map((section, index) => (
+          <div
+            key={index}
+            className={`portfolio-category grid-item item-${index + 1}`}
+          >
+            <h4 className="category-title">{section.title}</h4>
+            {section.items.map((item, itemIndex) => (
+              <div key={itemIndex} className="portfolio-item">
                 <h4 className="company-name">{item.company}</h4>
                 <ul className="tasks-list">
                   {item.tasks.map((task, taskIndex) => (
@@ -99,11 +102,10 @@ const Portfolio = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="#Test" className="read-more">Read more <FaExternalLinkAlt/>  </a>
               </div>
-            ))
-          )}
-        </div>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );

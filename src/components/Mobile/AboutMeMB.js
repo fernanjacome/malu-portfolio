@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 const AboutMe = () => {
   return (
-    <section id="about" className="about-me-section-mb">
+    <section id="about-mobile" className="about-me-section-mb">
       <h2 className="section-title">About Me</h2>
 
       <div className="about-me-content">

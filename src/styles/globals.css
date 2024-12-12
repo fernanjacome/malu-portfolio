@@ -27,10 +27,8 @@ body::before {
   background-size: cover;
   background-position: center;
 
-  opacity: 0.3;
-  /* Ajusta el valor de la opacidad aquí */
+  opacity: 0.2;
   z-index: -1;
-  /* Asegura que la imagen quede detrás del contenido */
 }
 
 :root {
@@ -258,7 +256,7 @@ img {
   min-width: 400px !important;
   max-width: 450px !important;
   border: none !important;
-  border-radius: 10px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -294,7 +292,7 @@ img {
 
   font-size: 1rem;
   border: 2px solid transparent;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   background-color: #a27852;
   color: #fff;
@@ -408,6 +406,7 @@ img {
 
 .social-links li {
   min-width: 120px;
+  width: 100%;
   padding: 1rem;
   list-style: none;
   border-radius: 10px;
@@ -459,20 +458,11 @@ img {
   margin-bottom: 8px;
 }
 
-.about-me-map {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.about-me-map h3 {
-  margin-top: 1rem;
-}
-
 .portfolio-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
   border-radius: 10px;
   padding: 2rem !important;
   position: relative;
@@ -495,76 +485,66 @@ img {
 }
 
 .portfolio-section h3 {
-  color: var(--color6);
+  color: var(--color4);
 }
 
 .portfolio-section .container {
   width: 1200px;
 }
 
-.bento-grid {
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  border-radius: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .grid-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 1rem;
+  background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.5rem;
-  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-/* Hacer que las tarjetas con índices pares ocupen más espacio horizontal */
-.grid-item:nth-child(3n) {
-  grid-column: span 2;
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--color4);
+  border-bottom: 2px solid var(--color4);
+  padding-bottom: 5px;
+}
+
+.portfolio-item {
+  margin-bottom: 10px;
 }
 
 .company-name {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #444;
-  margin-bottom: 0.5rem;
-}
-
-.read-more {
-  width: 150px;
-  text-align: end;
-  font-size: 0.8rem;
-  border: 1px solid var(--color3);
-  border-radius: 8px;
-  padding: 0.25rem;
-  text-decoration: none;
-  color: var(--color3);
-  display: flex;
-  gap: 0.2rem;
-  justify-content: center;
-  align-items: center;
-  transition: all ease 0.2s;
-}
-
-.read-more:hover {
-  border-color: transparent;
-  color: white;
-  background-color: var(--color4);
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .tasks-list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.task {
-  font-size: 0.9rem;
+.tasks-list .task {
+  font-size: 1rem;
   color: #555;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.tasks-list .task::before {
+  content: "•";
+  color: var(--color5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
 }
 
 .menu-toggle {
@@ -613,6 +593,10 @@ img {
 
   .main {
     width: 100%;
+  }
+
+  .header-navbar {
+    padding: 2.5rem 0;
   }
 
   .main-content-mobile {
@@ -675,7 +659,7 @@ img {
   }
 
   .button-custom {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .about-me-section-mb {
@@ -706,26 +690,7 @@ img {
   }
 
   .social-links a {
-    font-size: 1.3rem;
-  }
-
-  .task {
-    font-size: 1rem;
-  }
-
-  .company-name {
-    font-size: 1.5rem;
-  }
-
-  .read-more {
-    max-width: 100%;
-    width: 200px;
-    font-size: 1.2rem;
-    padding: 0.7rem;
-  }
-
-  .header-navbar {
-    padding: 2.5rem 0;
+    font-size: 1.rem;
   }
 
   .portfolio-section-mb h3 {
@@ -736,6 +701,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     border-radius: 10px;
     padding: 2rem !important;
     position: relative;
@@ -744,10 +710,10 @@ img {
   .portfolio-section-mb::before {
     content: "";
     position: absolute;
-    top: 6%;
-    left: 5%;
-    width: 90%;
-    height: 100%;
+    top: 7%;
+    left: 2.5%;
+    width: 95%;
+    height: 92.5%;
     border-radius: 10px;
     background-image: url("../../public/minimal3.jpg");
     background-size: cover;
@@ -785,8 +751,121 @@ img {
   .menu-toggle {
     display: block;
   }
+  .skills-container {
+    min-height: 1000px;
+  }
+  .skills-flex {
+    flex-direction: column;
+  }
+  .skills-flex section{
+    margin: 0;
+  }
+
+  .card-body p{
+    font-size: 1.3rem;
+  }
 }
 
 /* Estilos para tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
 }
+
+.skills-container {
+  margin: 20px 0;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.skills-section hr {
+  margin: 1rem 0 !important;
+  border: 1px solid var(--color6);
+  opacity: 0.8;
+}
+
+.skills-heading {
+  font-size: 1.5rem;
+  color: var(--color6);
+  margin-bottom: 10px;
+  border-left: 4px solid var(--color6);
+  padding-left: 10px;
+}
+
+.skills-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.skills-list li::before {
+  content: "•";
+  color: var(--color6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.skills-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-nav {
+  margin-top: 10px;
+}
+
+.footer-link {
+  color: var(--color5);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 400ms ease-out;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+
+
+/*BASURA DE BOOTSTRAP*/
