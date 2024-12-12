@@ -1,0 +1,13 @@
+# Archivo robots.txt para un portafolio web de una sola página
+
+# Bloquea el acceso a las imágenes de fondo y otros recursos pesados (si no deseas que los rastreadores indexen todas las imágenes)
+User-agent: *
+Disallow: /images/         # Bloquea imágenes que no deseas que los motores rastreen
+
+# Permite el acceso a todas las secciones relevantes de la página
+Allow: /index.html                # Permite el rastreo de la página principal
+
+
+# Opcional: Controla la velocidad de rastreo, si lo deseas
+Crawl-delay: 5                     # (Este valor es solo un ejemplo, ajústalo si es necesario)
+

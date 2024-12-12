@@ -23,7 +23,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../public/bg.webp");
+  background-image: url("../../public/images/bg.webp");
   background-size: cover;
   background-position: center;
 
@@ -475,7 +475,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../public/minimalgreen.webp");
+  background-image: url("../../public/images/minimalgreen.webp");
   background-size: cover;
   border-radius: 10px;
   background-position: center;
@@ -715,7 +715,7 @@ img {
     width: 95%;
     height: 92.5%;
     border-radius: 10px;
-    background-image: url("../../public/minimal3.jpg");
+    background-image: url("../../public/images/minimal3.webp");
     background-size: cover;
     background-position: center;
     opacity: 0.6;
