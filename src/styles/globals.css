@@ -783,13 +783,11 @@ img {
   }
 
   .contact-section-mobile {
-    margin: 1rem;
+    margin: 0 auto;
   }
 
   .contact-section-mobile .container {
-    max-width: 768px;
     margin: 0 auto;
-    padding: 0 1rem;
     text-align: center;
   }
 
@@ -807,7 +805,7 @@ img {
     background-size: cover;
     display: flex;
 
-    padding: 1.5rem;
+    padding: 1rem;
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
@@ -948,6 +946,7 @@ img {
 .skills-heading {
   font-size: 1.5rem;
   color: var(--color6);
+  font-weight: bold;
   margin-bottom: 10px;
   border-left: 4px solid var(--color6);
   padding-left: 10px;
@@ -970,6 +969,10 @@ img {
   color: #333;
   margin-bottom: 8px;
   position: relative;
+}
+
+.skills-list li svg {
+  color: var(--color4);
 }
 
 .skills-flex {
