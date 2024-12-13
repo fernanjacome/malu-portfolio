@@ -752,7 +752,7 @@ img {
     display: block;
   }
   .skills-container {
-    min-height: 1000px;
+    min-height: 900px;
   }
   .skills-flex {
     flex-direction: column;
@@ -773,6 +773,159 @@ img {
 
   .card-body p {
     font-size: 1.3rem;
+  }
+  .testimonials-title {
+    margin-bottom: 2rem !important;
+  }
+
+  .testimonial-icon {
+    left: 45% !important;
+  }
+
+  .contact-section-mobile {
+    margin: 1rem;
+  }
+
+  .contact-section-mobile .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .contact-section-mobile .contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color4);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-section-mobile .contact-content {
+    border-radius: 12px;
+    background: url("/images/contactMB.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .contact-section-mobile .contact-info {
+    flex: 1;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    align-self: center;
+  }
+
+  .contact-section-mobile hr {
+    margin: 1rem 0 !important;
+  }
+
+  .contact-section-mobile .contact-info h4 {
+    font-size: 1.7rem !important;
+    text-align: center;
+    color: var(--color4);
+  }
+  .contact-section-mobile .contact-info hr {
+    margin: 1rem 0 !important;
+  }
+
+  .contact-section-mobile .contact-item {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-section-mobile .contact-label {
+    font-weight: bold;
+
+    color: var(--color6);
+  }
+
+  .contact-section-mobile .contact-link {
+    font-size: 1.3rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-section-mobile .contact-link:hover {
+    color: var(--color5);
+  }
+
+  .contact-section-mobile .contact-form {
+    flex: 1;
+    background-color: #ffffff;
+
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-section-mobile .form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .contact-section-mobile .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-section-mobile .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-section-mobile .form-group label {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .contact-section-mobile .form-group input,
+  .contact-section-mobile .form-group textarea {
+    padding: 0.7rem;
+    font-size: 1.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .contact-section-mobile .form-group textarea {
+    resize: vertical;
+    height: 150px;
+  }
+
+  .contact-section-mobile .submit-button {
+    padding: 0.5rem;
+    background-color: var(--color6);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-section-mobile .submit-button:hover {
+    background-color: var(--color4);
+  }
+
+  .contact-section-mobile .form-status {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: var(--color6);
   }
 }
 
@@ -827,7 +980,7 @@ img {
 
 .footer {
   background-color: #222;
-  color: #fff;
+
   padding: 20px 10px;
   text-align: center;
   width: 100%;
@@ -838,6 +991,9 @@ img {
   margin: 0 auto;
 }
 
+.footer-content p {
+  color: white;
+}
 .footer-nav {
   margin-top: 10px;
 }

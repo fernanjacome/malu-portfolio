@@ -1,5 +1,6 @@
-import Contact from "@/components/Contatc";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ContactMB from "@/components/Mobile/ContactMB";
 import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials";
 import { useEffect, useState, Suspense, lazy } from "react";
@@ -109,6 +110,22 @@ export default function Home() {
               }`}
             >
               <SkillsMB />
+            </div>
+            <div
+              ref={testimonialRef}
+              className={`transition-opacity  ${
+                testimonialsInView ? "fade-in" : "opacity-0"
+              }`}
+            >
+              <Testimonials />
+            </div>
+            <div
+              ref={contactRef}
+              className={`transition-opacity  ${
+                contactInView ? "fade-in" : "opacity-0"
+              }`}
+            >
+              <ContactMB />
             </div>
           </div>
         ) : (
