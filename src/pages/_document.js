@@ -20,10 +20,7 @@ class MyDocument extends Document {
 
           {/* Meta tags for SEO */}
           <meta charSet="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=0.70, maximum-scale=0.70, user-scalable=no"
-          />
+
           <meta
             name="description"
             content="Maria Luisa Carrion - Marketing and Communications"
@@ -50,7 +47,6 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="/path-to-image.jpg" />
 
           {/* Title tag */}
-          <title>Maria Luisa Carrion</title>
         </Head>
         <body>
           <Main />

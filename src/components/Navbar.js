@@ -1,41 +1,87 @@
 import React, { useState, useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ activeSectionAPI, isMobile }) => {
   const [activeLink, setActiveLink] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // Estado para determinar si es móvil
 
-  // Verificar el tamaño de la ventana y actualizar el estado de isMobile
+  const handleScroll = () => {
+    const sections = [
+      {
+        id: "home",
+        element: document.getElementById(isMobile ? "home-mobile" : "home"),
+      },
+      {
+        id: "about",
+        element: document.getElementById(isMobile ? "about-mobile" : "about"),
+      },
+      {
+        id: "portfolio",
+        element: document.getElementById(
+          isMobile ? "portfolio-mobile" : "portfolio"
+        ),
+      },
+      {
+        id: "skills",
+        element: document.getElementById(isMobile ? "skills-mobile" : "skills"),
+      },
+      {
+        id: "testimonials",
+        element: document.getElementById(
+          isMobile ? "testimonials-mobile" : "testimonials"
+        ),
+      },
+      {
+        id: "contact",
+        element: document.getElementById(
+          isMobile ? "contact-mobile" : "contact"
+        ),
+      },
+    ];
+    const visibilityThreshold = 90;
+    sections.forEach((section) => {
+      if (section.element) {
+        const rect = section.element.getBoundingClientRect();
+
+        const sectionHeight = rect.bottom - rect.top;
+        const visibleHeight =
+          Math.min(window.innerHeight, rect.bottom) - Math.max(0, rect.top);
+        const visiblePercentage = (visibleHeight / sectionHeight) * 100;
+
+        if (visiblePercentage >= visibilityThreshold) {
+          setActiveLink(section.id);
+        }
+      }
+    });
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Definir el umbral para "móvil" en 768px
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Verifica el tamaño al cargar
-
-    return () => window.removeEventListener("resize", handleResize); // Limpiar el listener al desmontar
   }, []);
 
   const handleSetActive = (section) => {
     setActiveLink(section);
     setMenuOpen(false);
 
-    // Modificar el ID de la sección si estamos en modo móvil
     const sectionId = isMobile ? `${section}-mobile` : section;
     const element = document.getElementById(sectionId);
 
     if (element) {
-      element.scrollIntoView({
+      const yOffset = -document.querySelector(".header-navbar").offsetHeight;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log("Menu toggled:", menuOpen);
   };
 
   return (
@@ -50,7 +96,6 @@ const Navbar = () => {
           { id: "portfolio", label: "Portfolio" },
           { id: "skills", label: "Skills" },
           { id: "testimonials", label: "Testimonials" },
-          { id: "blog", label: "Blog" },
           { id: "contact", label: "Contact" },
         ].map((item) => (
           <li key={item.id}>
@@ -58,7 +103,7 @@ const Navbar = () => {
               href={`#${isMobile ? `${item.id}-mobile` : item.id}`}
               className={activeLink === item.id ? "active" : ""}
               onClick={(e) => {
-                e.preventDefault(); // Prevenir la navegación predeterminada
+                e.preventDefault();
                 handleSetActive(item.id);
               }}
             >

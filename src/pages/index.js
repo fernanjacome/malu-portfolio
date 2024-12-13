@@ -1,5 +1,7 @@
+import Contact from "@/components/Contatc";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Testimonials from "@/components/Testimonials";
 import { useEffect, useState, Suspense, lazy } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -28,6 +30,7 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Usamos useInView para detectar si la sección está en vista
   const { ref: heroRef, inView: heroInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -48,40 +51,62 @@ export default function Home() {
     threshold: 0.3,
   });
 
-  // Establecer las clases CSS para la animación de fade-in
-  const heroClassName = heroInView ? "fade-in" : "opacity-0";
-  const abtClassName = abtInView ? "fade-in" : "opacity-0";
-  const portfolioClassName = portfolioInView ? "fade-in" : "opacity-0";
-  const skillsClassName = skillsInView ? "fade-in" : "opacity-0";
+  const { ref: testimonialRef, inView: testimonialsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const { ref: contactRef, inView: contactInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   return (
     <div className="main">
       <Suspense fallback={<div>Loading...</div>}>
-        <Navbar isMobile={isMobile} />
+        <Navbar
+          isMobile={isMobile}
+          activeSectionAPI={{
+            hero: heroInView,
+            about: abtInView,
+            portfolio: portfolioInView,
+            skills: skillsInView,
+            testimonials: testimonialsInView,
+            contact: contactInView,
+          }}
+        />
 
         {isMobile ? (
           <div className="main-content-mobile">
             <div
               ref={heroRef}
-              className={`transition-opacity duration-1000 ${heroClassName}`}
+              className={`transition-opacity duration-1000 ${
+                heroInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <HeroMB />
             </div>
             <div
               ref={abtRef}
-              className={`transition-opacity duration-1000 ${abtClassName}`}
+              className={`transition-opacity duration-1000 ${
+                abtInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <AboutMeMB />
             </div>
             <div
               ref={portfolioRef}
-              className={`transition-opacity duration-1000 ${portfolioClassName}`}
+              className={`transition-opacity duration-1000 ${
+                portfolioInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <PortfolioMB />
             </div>
             <div
               ref={skillsRef}
-              className={`transition-opacity duration-1000 ${skillsClassName}`}
+              className={`transition-opacity duration-1000 ${
+                skillsInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <SkillsMB />
             </div>
@@ -90,27 +115,51 @@ export default function Home() {
           <div className="main-content-pc">
             <div
               ref={heroRef}
-              className={`transition-opacity duration-1000 ${heroClassName}`}
+              className={`transition-opacity duration-1000 ${
+                heroInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <Hero />
             </div>
             <div
               ref={abtRef}
-              className={`transition-opacity duration-1000 ${abtClassName}`}
+              className={`transition-opacity duration-1000 ${
+                abtInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <AboutMe />
             </div>
             <div
               ref={portfolioRef}
-              className={`transition-opacity duration-1000 ${portfolioClassName}`}
+              className={`transition-opacity duration-1000 ${
+                portfolioInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <Portfolio />
             </div>
             <div
               ref={skillsRef}
-              className={`transition-opacity duration-1000 ${skillsClassName}`}
+              className={`transition-opacity duration-1000 ${
+                skillsInView ? "fade-in" : "opacity-0"
+              }`}
             >
               <Skills />
+            </div>
+            <div
+              ref={testimonialRef}
+              className={`transition-opacity  ${
+                testimonialsInView ? "fade-in" : "opacity-0"
+              }`}
+            >
+              <Testimonials />
+            </div>
+            <div
+              ref={contactRef}
+              className={`transition-opacity  ${
+                contactInView ? "fade-in" : "opacity-0"
+              }`}
+            >
+              <Contact />
             </div>
           </div>
         )}

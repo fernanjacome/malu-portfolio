@@ -21,6 +21,7 @@ const AboutMe = () => {
             </div>
             <div className="about-me-snapshot">
               <h3 className="content-title">Snapshot</h3>
+              <hr></hr>
               <ul className="snapshot-list">
                 <li>
                   <strong>Location:</strong> Sydney, Australia
@@ -48,7 +49,7 @@ const AboutMe = () => {
                     height={25}
                   />
                   <a
-                    href="https://www.linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/marialuisacarrion/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

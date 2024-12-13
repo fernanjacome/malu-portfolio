@@ -5,7 +5,7 @@ export default function Skills() {
       <hr></hr>
       <div className="skills-flex">
         <section className="skills-section">
-          <h3 className="skills-heading">Core Skills</h3>
+          <h4 className="skills-heading">Core Skills</h4>
           <p className="skills-description">
             A diverse set of abilities focused on communication and strategy.
           </p>
@@ -42,6 +42,7 @@ export default function Skills() {
           </ul>
         </section>
       </div>
+      <hr></hr>
     </div>
   );
 }
