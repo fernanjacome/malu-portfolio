@@ -1,20 +1,52 @@
+import {
+  FaAngleDoubleDown,
+  FaBullhorn,
+  FaBullseye,
+  FaBus,
+  FaHandsHelping,
+  FaIndustry,
+  FaLaptop,
+  FaLeaf,
+  FaMicrophone,
+  FaPen,
+  FaTasks,
+} from "react-icons/fa";
+
 export default function Skills() {
   return (
     <div id="skills" className="skills-container">
       <h3 className="section-title">Skills</h3>
-      <hr></hr>
+      <hr />
       <div className="skills-flex">
         <section className="skills-section">
           <h4 className="skills-heading">Core Skills</h4>
           <p className="skills-description">
             A diverse set of abilities focused on communication and strategy.
           </p>
-          <hr></hr>
+          <hr />
           <ul className="skills-list">
-            <li>Marketing Strategy</li>
-            <li>Crisis Communications</li>
-            <li>Stakeholder Engagement</li>
-            <li>Copywriting in Spanish and English</li>
+            <li>
+              <FaBullseye
+                style={{ marginRight: "8px", verticalAlign: "middle" }}
+              />{" "}
+              Marketing Strategy
+            </li>
+            <li>
+              <FaMicrophone
+                style={{ marginRight: "8px", verticalAlign: "middle" }}
+              />{" "}
+              Crisis Communications
+            </li>
+            <li>
+              <FaHandsHelping
+                style={{ marginRight: "8px", verticalAlign: "middle" }}
+              />{" "}
+              Stakeholder Engagement
+            </li>
+            <li>
+              <FaPen style={{ marginRight: "8px", verticalAlign: "middle" }} />{" "}
+              Copywriting in Spanish and English
+            </li>
           </ul>
         </section>
 
@@ -23,10 +55,20 @@ export default function Skills() {
           <p className="skills-description">
             Software and platforms mastered for effective project management.
           </p>
-          <hr></hr>
+          <hr />
           <ul className="skills-list">
-            <li>Adobe Creative Suite</li>
-            <li>Trello, Monday.com</li>
+            <li>
+              <FaAngleDoubleDown
+                style={{ marginRight: "8px", verticalAlign: "middle" }}
+              />{" "}
+              Adobe Creative Suite
+            </li>
+            <li>
+              <FaTasks
+                style={{ marginRight: "8px", verticalAlign: "middle" }}
+              />{" "}
+              Trello, Monday.com
+            </li>
           </ul>
         </section>
 
@@ -35,14 +77,20 @@ export default function Skills() {
           <p className="skills-description">
             Specialized knowledge in key modern industries.
           </p>
-          <hr></hr>
+          <hr />
           <ul className="skills-list">
-            <li>Sustainability and Renewable Energy</li>
-            <li>Public Transport and Electric Mobility</li>
+            <li>
+              <FaLeaf style={{ marginRight: "8px", verticalAlign: "middle" }} />{" "}
+              Sustainability and Renewable Energy
+            </li>
+            <li>
+              <FaBus style={{ marginRight: "8px", verticalAlign: "middle" }} />{" "}
+              Public Transport and Electric Mobility
+            </li>
           </ul>
         </section>
       </div>
-      <hr></hr>
+      <hr />
     </div>
   );
 }

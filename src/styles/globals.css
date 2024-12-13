@@ -817,17 +817,6 @@ img {
   color: #333;
   margin-bottom: 8px;
   position: relative;
-  padding-left: 20px;
-}
-
-.skills-list li::before {
-  content: "•";
-  color: var(--color6);
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.2rem;
-  line-height: 1;
 }
 
 .skills-flex {

@@ -10,6 +10,31 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=0.70, maximum-scale=0.70, user-scalable=no"
         />
+
+        <meta
+          name="description"
+          content="Maria Luisa Carrion - Marketing and Communications"
+        />
+        <meta name="author" content="Maria Luisa Carrion" />
+
+        {/* Open Graph meta tags for social media sharing */}
+        <meta property="og:title" content="Maria Luisa Carrion" />
+        <meta
+          property="og:description"
+          content="Maria Luisa Carrion - Marketing and Communications"
+        />
+        <meta property="og:image" content="/path-to-image.jpg" />
+        <meta property="og:url" content="https://www.marialuisacarrion.com" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter card meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Maria Luisa Carrion" />
+        <meta
+          name="twitter:description"
+          content="Maria Luisa Carrion - Marketing and Communications"
+        />
+        <meta name="twitter:image" content="/path-to-image.jpg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com"; // Importa la librería EmailJS
+import { FaEnvelope, FaFilePdf, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,10 +27,10 @@ const Contact = () => {
     // Usa el servicio de EmailJS para enviar el correo
     emailjs
       .send(
-        "service_kjk04p6", // ID del servicio de correo
-        "template_msistns", // ID de la plantilla de correo
-        formData, // Los datos del formulario
-        "G4xIQngJXvDpfq_B5" // Tu user_id de EmailJS
+        "service_kjk04p6",
+        "template_msistns",
+        formData,
+        "G4xIQngJXvDpfq_B5"
       )
       .then(
         (response) => {
@@ -51,35 +52,47 @@ const Contact = () => {
 
         <div className="contact-content">
           <div className="contact-info">
-            <h4>Contact info</h4>
+            <h4>Contact Information</h4>
             <hr />
             <div className="contact-item">
-              <span className="contact-label">Email: </span>
+              <span className="contact-label">
+                <FaEnvelope style={{ marginBottom: "0.2rem" }} /> Email:{" "}
+              </span>
               <a
                 href="mailto:marialuiscarrion@gmail.com"
                 className="contact-link"
+                aria-label="Send an email to Maria Luis Carrion"
               >
                 marialuiscarrion@gmail.com
               </a>
             </div>
             <div className="contact-item">
-              <span className="contact-label">LinkedIn: </span>
+              <span className="contact-label">
+                <FaLinkedin style={{ marginBottom: "0.2rem" }} /> LinkedIn:{" "}
+              </span>
               <a
                 href="https://www.linkedin.com/in/marialuisacarrion/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-link"
+                aria-label="Visit LinkedIn profile of Maria Luis Carrion"
               >
                 LinkedIn Profile
               </a>
             </div>
             <div className="contact-item">
-              <span className="contact-label">Download CV: </span>
-              <a href="/path/to/your-cv.pdf" download className="contact-link">
-                Download PDF
+              <span className="contact-label">
+                <FaFilePdf style={{ marginBottom: "0.2rem" }} /> Download CV:{" "}
+              </span>
+              <a
+                href="/path/to/your-cv.pdf"
+                download
+                className="contact-link"
+                aria-label="Download Maria Luis Carrion's CV"
+              >
+                Download CV (PDF)
               </a>
             </div>
-            <hr />
           </div>
           <div className="contact-form">
             <h3 className="form-title">Send a Message</h3>
