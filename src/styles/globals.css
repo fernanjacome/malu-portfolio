@@ -805,7 +805,7 @@ img {
     background-size: cover;
     display: flex;
 
-    padding: 1rem;
+    padding: 2.5rem;
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
@@ -817,7 +817,7 @@ img {
     text-align: left;
     background-color: white;
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 2.1rem;
     align-self: center;
   }
 
