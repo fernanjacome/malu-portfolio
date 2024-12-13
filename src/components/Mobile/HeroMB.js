@@ -22,6 +22,7 @@ const HeroMB = () => {
               width={300}
               height={300}
               style={{}}
+              priority
             />
             <p>
               A Marketing and Communications expert passionate about creating
