@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=0.70, maximum-scale=0.70, user-scalable=no"
+          content="width=device-width, initial-scale=0.7, maximum-scale=1, user-scalable=yes"
         />
 
         <meta
